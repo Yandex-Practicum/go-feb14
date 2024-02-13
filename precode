@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+func main() {
+	resp, err := http.Get("https://bba4h86i8icpvi5ot97n.containers.yandexcloud.net/go/feb14")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer resp.Body.Close()
+
+	// Получить тело ответа resp
+	...
+	// Обработать ошибку
+	...
+
+
+	fmt.Println("что же скрывается внутри?")
+	// Вывести ссылку на экран
+	...
+}
